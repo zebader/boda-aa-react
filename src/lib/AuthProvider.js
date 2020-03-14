@@ -17,7 +17,7 @@ export const withAuth = Comp => {
                 user={authStore.user}
                 logout={authStore.logout}
                 isLoggedin={authStore.isLoggedin}
-                isBusinessAccount={authStore.isBusinessAccount}
+                isAdminAccount={authStore.isAdminAccount}
                 {...this.props}
               />
             );
@@ -31,7 +31,7 @@ export const withAuth = Comp => {
 class AuthProvider extends Component {
   state = {
     isLoggedin: false,
-    isBusinessAccount: false,
+    isAdminAccount: false,
     user: null,
     isLoading: true
   };
@@ -40,12 +40,12 @@ class AuthProvider extends Component {
     auth
       .me()
       .then(user => {
-        if(user.userType === 'business') {
+        if(user.userType === 'admin') {
           this.setState({
           isLoggedin: true,
           user,
           isLoading: false,
-          isBusinessAccount: true,
+          isAdminAccount: true,
           })
         } else {
           this.setState({
@@ -64,42 +64,16 @@ class AuthProvider extends Component {
       });
   }
 
-  signup = user => {
-    const { username, password, email, location, userType } = user;
-    auth
-      .signup({ username, password, email, location, userType })
-      .then(user => {
-        if(user.userType === 'business') {
-          this.setState({
-            isLoggedin: true,
-            user,
-            isBusinessAccount: true,
-          });
-        } else {
-          this.setState({
-            isLoggedin: true,
-            user
-          });
-        }
-      })
-      .catch(({ response: { data: error } }) => {
-        this.setState({
-          message: error.statusMessage
-        });
-      });
-  };
-
   login = user => {
-    const { username, password, userType } = user;
-    console.log(userType)
+    const { username, password } = user;
     auth
-      .login({ username, userType, password })
+      .login({ username, password })
       .then(user => {
-        if(user.userType === 'business') {
+        if(user.userType === 'admin') {
           this.setState({
             isLoggedin: true,
             user,
-            isBusinessAccount: true,
+            isAdminAccount: true,
           });
         } else {
           this.setState({
@@ -118,24 +92,23 @@ class AuthProvider extends Component {
         this.setState({
           isLoggedin: false,
           user: null,
-          isBusinessAccount: false,
+          isAdminAccount: false,
         });
       })
       .catch(() => {});
   };
   render() {
-    const { isLoading, isLoggedin, user, isBusinessAccount } = this.state;
+    const { isLoading, isLoggedin, user, isAdminAccount } = this.state;
     return isLoading ? (
       <div>Loading</div>
     ) : (
       <Provider
         value={{
           isLoggedin,
-          isBusinessAccount,
+          isAdminAccount,
           user,
           login: this.login,
           logout: this.logout,
-          signup: this.signup
         }}
       >
         {this.props.children}

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Switch } from "react-router-dom";
 
-import CreateUser from "./pages/CreateUser";
-import AdminHome from "./pages/CreateUser";
-import Login from "./pages/Login";
-import UserHome from "./pages/Login";
+import CreateUser from "./pages/admin/components/CreateUser";
+import AdminHome from "./pages/admin/components/AdminHome";
+import UserHome from "./pages/user/components/UserHome";
+import Login from "./pages/login/components/Login";
 
 import PrivateAdminRoute from "./components/PrivateAdminRoute";
 import PrivateUserRoute from "./components/PrivateUserRoute";
