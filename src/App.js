@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Switch } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import CreateUser from "./pages/CreateUser";
+import AdminHome from "./pages/CreateUser";
+import Login from "./pages/Login";
+import UserHome from "./pages/Login";
+
+import PrivateAdminRoute from "./components/PrivateAdminRoute";
+import PrivateUserRoute from "./components/PrivateUserRoute";
+
+import AnonRoute from "./components/AnonRoute";
+import AuthProvider from "./lib/AuthProvider";
+
+class App extends Component {
+  render() {
+    return (
+      <AuthProvider>
+          <Switch>
+            <AnonRoute path="/login" component={Login} exact/>
+            <PrivateAdminRoute path="/admin" component={AdminHome} exact/>
+            <PrivateAdminRoute path="/create-user" component={CreateUser} exact/>
+            <PrivateUserRoute path="/home" component={UserHome} exact/>
+          </Switch>
+      </AuthProvider>
+    );
+  }
 }
 
 export default App;
