@@ -17,6 +17,7 @@ class App extends Component {
     return (
       <AuthProvider>
           <Switch>
+            <AnonRoute path="/" component={Login} exact/>     
             <AnonRoute path="/login" component={Login} exact/>
             <PrivateAdminRoute path="/admin" component={AdminHome} exact/>
             <PrivateAdminRoute path="/create-user" component={CreateUser} exact/>
