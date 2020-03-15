@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import auth from "./services/auth-service";
+import auth from "../services/auth-service";
 const { Consumer, Provider } = React.createContext();
 
 export { Consumer };
