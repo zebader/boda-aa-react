@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap');
+@import '../pages/admin/scss/admin.scss';
+@import '../pages/user/scss/user.scss';
+@import '../pages/login/scss/login.scss';
+@import '../components/primitives/primitives.scss';
+@import './variables.scss';
+@import './mixins.scss';
+
+*{
+  margin:0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  color: $dark-color;
+  font-size: $font-m;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+ol, ul , li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+  &:before, &:after {
+    content: '';
+    content: none; 
+  } 
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+
+body{
+  background-color: white;
+  line-height: 1;
+}
+main{
+  @include flex-center(row);
+  background-color: $main-color;
+  height: $height-full;
+}
+article{
+  @include flex-center(column);
+  width: $area-3q;
+}
+form{
+  @include flex-center(column);
+  width: $area-full;
+}
+input{
+  width: $area-full;
+  border: 0;
+  height: $input-height;
+  margin: $space-m;
+  font-size: $font-l;
+  color: $mid-color;
+  text-indent: $space-l;
+  transition: all 200ms ease-in-out;
+  box-shadow: 0px 27px 0px -25px $dark-color;
+  &::placeholder{
+    font-weight: $light;
+    color: $mid-color;
+  }
+  &:focus{
+    outline: 1px;
+    outline-color: $mid-color;
+    outline-style: solid;
+    box-shadow: 0px 30px 0px -25px $mid-color;
+    outline-offset: 0;
+  }
+  &:active{
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+    outline-offset: 0;
+  }
+}
+button {
+  background-color: $dark-color;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  border-radius: $space-xl;
+  width: $area-full;
+  height: $input-height;
+  margin: $space-xl;
+  margin-top: 50px;
+  font-size: $font-l;
+  color: $soft-color;
+}
+
+@media (min-width: $breakpoint-medium-screen) {
+  article{
+    width: $area-half;
+  }
+  form{
+    width: $area-3q;
+  }
+}

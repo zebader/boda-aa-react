@@ -12,21 +12,21 @@ const Login = props => {
   }
 
   return (
-    <article className='hero-search'>
+    <article className=''>
       <form onSubmit={handleFormSubmit} autoComplete='off'>
         <input
           name='username'
           id='username'
           type='text'
           value={username}
-          placeholder='username'
+          placeholder='Usuario'
           onChange={(e) => setOnChangeName(e.target.value)} />
         <input
           name='password'
           id='password'
           type='password'
           value={password}
-          placeholder='password'
+          placeholder='Contraseña'
           onChange={(e) => setOnChangePass(e.target.value)} />
 
         <button type='submit'

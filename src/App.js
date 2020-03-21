@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Switch } from "react-router-dom";
+import './scss/App.scss'
 
 import CreateUser from "./pages/admin/components/CreateUser";
 import AdminHome from "./pages/admin/components/AdminHome";
@@ -15,6 +16,7 @@ import AuthProvider from "./lib/AuthProvider";
 class App extends Component {
   render() {
     return (
+      <main>
       <AuthProvider>
           <Switch>
             <AnonRoute path="/" component={Login} exact/>     
@@ -24,6 +26,7 @@ class App extends Component {
             <PrivateUserRoute path="/home" component={UserHome} exact/>
           </Switch>
       </AuthProvider>
+      </main>
     );
   }
 }
