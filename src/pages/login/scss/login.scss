@@ -1,0 +1,12 @@
+@import '../../../scss/variables.scss';
+.login-logo{
+  width: $area-half;
+  margin-top:$space-xl;
+  max-width: 250px;
+}
+@media (min-width: $breakpoint-medium-screen) {
+  .login-logo{
+    width: $area-1q;
+    margin-top:$space-xl;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { withAuth } from "../../../lib/AuthProvider";
+import logo from "../../../images/main-logo.svg"
 
 const Login = props => {
   const [username, setOnChangeName] = useState('')
@@ -12,7 +13,9 @@ const Login = props => {
   }
 
   return (
-    <article className=''>
+    <article>
+      <img className='login-logo'src={logo} alt='logo'/>
+      <p>Acceso</p>
       <form onSubmit={handleFormSubmit} autoComplete='off'>
         <input
           name='username'
@@ -32,7 +35,7 @@ const Login = props => {
         <button type='submit'
         >Submit</button>
       </form>
-
+      <a href='mailto:zebader@hotmail.com'>Pedir acceso</a>
     </article>
   )
 }
