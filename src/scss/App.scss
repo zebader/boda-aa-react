@@ -49,6 +49,7 @@ body{
 main{
   @include flex-center(row,flex-start);
   background-color: $main-color;
+  background-image: url('../images/marble.png');
   min-height: $height-full;
   height: $area-full;
 }
