@@ -1,0 +1,18 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+nav{
+  @include flex-center(row, center);
+  height:$space-xl;
+  width: $area-full;
+  background-color: $main-color;
+  position: fixed;
+  top:$space-none;
+}
+.nav-section{
+  @include flex-center(row,center,space-between);
+  height:$space-xl;
+  width: $area-3q;
+}
+@media (min-width: $breakpoint-medium-screen) {
+}

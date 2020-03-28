@@ -1,0 +1,15 @@
+@import '../../../scss/variables.scss';
+@import '../../../scss/mixins.scss';
+
+.user-section{
+  margin-top:$space-xl;
+}
+.user-article{
+  @include flex-center(column);
+  width: $area-full;
+}
+@media (min-width: $breakpoint-medium-screen) {
+  .user-article{
+    width: $area-3q;
+  }
+}

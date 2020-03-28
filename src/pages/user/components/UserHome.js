@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import Nav from '../../../components/Nav'
+import utils from '../../../utils/utils'
 
 export default function UserHome() {
+  useEffect(() => utils.removeBackground() , []);
   return (
-    <div>
-      <h1>UserHome</h1>
-    </div>
+    <section className='user-section'>
+      <Nav/>
+      <article className='user-article'>
+      </article>
+    </section>
   )
 }

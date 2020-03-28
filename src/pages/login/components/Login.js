@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { withAuth } from "../../../lib/AuthProvider";
-import logo from "../../../images/main-logo.svg"
+import { withAuth } from '../../../lib/AuthProvider';
+import Logo from '../../../components/Logo'
 
 const Login = props => {
   const [username, setOnChangeName] = useState('')
@@ -14,7 +14,7 @@ const Login = props => {
 
   return (
     <article>
-      <img className='login-logo'src={logo} alt='logo'/>
+    <Logo LogoType='login-logo'/>
       <p>Acceso</p>
       <form onSubmit={handleFormSubmit} autoComplete='off'>
         <input

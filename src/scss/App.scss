@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,900&display=swap');
-@import '../pages/admin/scss/admin.scss';
-@import '../pages/user/scss/user.scss';
-@import '../pages/login/scss/login.scss';
-@import '../components/primitives/primitives.scss';
 @import './variables.scss';
 @import './mixins.scss';
 
@@ -36,7 +32,6 @@ blockquote, q {
     content: none; 
   } 
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0; 
@@ -53,9 +48,12 @@ main{
   min-height: $height-full;
   height: $area-full;
 }
-article{
+section{
   @include flex-center(column, center);
   width: $area-3q;
+}
+article{
+  @extend section;
 }
 p{
   text-align: $main-align;
@@ -111,6 +109,10 @@ button {
   color: $soft-color;
   font-weight: $light;
 }
+.clean-background {
+  background-color: $white;
+  background-image: none;
+}
 
 @media (min-width: $breakpoint-medium-screen) {
   article{
@@ -120,3 +122,8 @@ button {
     width: $area-3q;
   }
 }
+
+@import '../pages/admin/scss/admin.scss';
+@import '../pages/user/scss/user.scss';
+@import '../components/scss/nav.scss';
+@import '../components/scss/logo.scss';

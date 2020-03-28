@@ -1,8 +1,11 @@
-@import '../../../scss/variables.scss';
+@import '../../scss/variables.scss';
 .login-logo{
   width: $area-half;
   margin-top:$space-xl;
   max-width: 250px;
+}
+.nav-logo{
+  height: $area-3q;
 }
 @media (min-width: $breakpoint-medium-screen) {
   .login-logo{
