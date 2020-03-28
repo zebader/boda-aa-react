@@ -1,0 +1,25 @@
+@import '../../../scss/variables.scss';
+
+.nav-counter {
+  background: $white;
+  margin:3px;
+  border-radius: 5px;
+  line-height: 2;
+  border: 1px solid $mid-color;
+  box-shadow: 1px 1px 0px 0px $mid-color;
+  text-align: $main-align;
+  display: block;
+  max-width: 40px;
+  width: $area-half;
+  font-size: $font-m;
+  font-weight: $bold;
+  span {
+    font-size: $font-s;
+    font-weight: $reguler;
+    margin-left: 2px;
+  }
+}
+.counter-article{
+  @include flex-center(row);
+  width: $area-full;
+}

@@ -1,0 +1,14 @@
+@import '../../scss/variables.scss';
+.nav-logout{
+  height: $area-half;
+  cursor:pointer;
+  transition: all 100ms ease-in-out;
+}
+.nav-logout:hover{
+  transform: scale(1.2);
+}
+.nav-logout:active{
+  transform: scale(1);
+}
+@media (min-width: $breakpoint-medium-screen) {
+}
