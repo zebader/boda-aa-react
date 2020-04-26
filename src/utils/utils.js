@@ -7,7 +7,7 @@ export default {
   },
   getTimeLeft() {
     // as count form 0 add a month and day less
-    const weddingDate = new Date("2020", "03", "28" , "16", "22", "30"); 
+    const weddingDate = new Date("2021", "03", "28" , "16", "22", "30"); 
     const actualTime = new Date();
  
     const daysLeft = Math.round(( weddingDate - actualTime) / (1000 * 60 * 60 * 24));

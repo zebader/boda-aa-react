@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import utils from '../../utils/utils'
 import NavCounter from './NavCounter'
+import SplashCounter from './SplashCounter'
 
 function Counter(props) {
   const [seconds, setSeconds] =  useState(utils.getTimeLeft().secondsLeft());
@@ -29,6 +30,13 @@ function Counter(props) {
     <section>
       {props.counterType === "navCounter" && 
       <NavCounter
+        days={days}
+        hours={hours}
+        minutes={minutes}
+        seconds={seconds}/>
+      }
+      {props.counterType === "splashCounter" && 
+      <SplashCounter
         days={days}
         hours={hours}
         minutes={minutes}

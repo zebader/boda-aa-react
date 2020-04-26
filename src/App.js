@@ -6,6 +6,7 @@ import CreateUser from "./pages/admin/components/CreateUser";
 import AdminHome from "./pages/admin/components/AdminHome";
 import UserHome from "./pages/user/components/UserHome";
 import Login from "./pages/login/components/Login";
+import Splash from "./pages/splash/components/Splash";
 
 import PrivateAdminRoute from "./components/PrivateAdminRoute";
 import PrivateUserRoute from "./components/PrivateUserRoute";
@@ -19,7 +20,7 @@ class App extends Component {
       <main>
       <AuthProvider>
           <Switch>
-            <AnonRoute path="/" component={Login} exact/>     
+            <AnonRoute path="/" component={Splash} exact/>     
             <AnonRoute path="/login" component={Login} exact/>
             <PrivateAdminRoute path="/admin" component={AdminHome} exact/>
             <PrivateAdminRoute path="/create-user" component={CreateUser} exact/>

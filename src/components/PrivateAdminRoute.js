@@ -8,7 +8,7 @@ function PrivateAdminRoute({ component: Component, isLoggedin,isAdminAccount, ..
       {...rest}
       render={props =>
         { if(!isLoggedin) {
-          return (<Redirect to="/login"/>)
+          return (<Redirect to="/"/>)
         } else if (isLoggedin && isAdminAccount) {
           return (<Component {...props} />)
         } else {

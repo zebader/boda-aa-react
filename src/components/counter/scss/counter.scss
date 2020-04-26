@@ -22,4 +22,40 @@
 .counter-article{
   @include flex-center(row);
   width: $area-full;
+  &-splash{
+    @include flex-center(row);
+    width: $area-full;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+}
+
+.splash-counter {
+  margin:3px;
+  line-height: 2;
+  text-align: $main-align;
+  display: block;
+  max-width: 25%;
+  width: $area-half;
+  font-size: $font-l;
+  font-weight: $bold;
+  span {
+    font-size: $font-s;
+    font-weight: $reguler;
+    margin-left: 2px;
+  }
+  &-days {
+    margin:3px;
+    line-height: 2;
+    width: $area-full;
+    text-align: $main-align;
+    display: block;
+    font-size: 56px;
+    font-weight: $bold;
+    span {
+      font-size: $font-m;
+      font-weight: $reguler;
+      margin-left: 2px;
+    }
+  }
 }
