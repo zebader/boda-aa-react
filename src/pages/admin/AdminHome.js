@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function AdminHome() {
+const AdminHome = () => {
   return (
     <div>
       <h1>AdminHome</h1>
     </div>
   )
 }
+
+export default AdminHome;

@@ -1,9 +1,9 @@
 import React from 'react'
-import Logo from './Logo'
-import LogOut from './logOut'
-import Counter from './counter/Counter'
+import Logo from '../logo/Logo'
+import LogOut from '../logOut/logOut'
+import Counter from '../counter/Counter'
 
-function Nav() {
+const Nav = () => {
   return (
     <nav>
       <section className='nav-section'>

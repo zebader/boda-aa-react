@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import utils from '../../utils/utils'
-import NavCounter from './NavCounter'
-import SplashCounter from './SplashCounter'
+import NavCounter from './components/NavCounter'
+import SplashCounter from './components/SplashCounter'
 
-function Counter(props) {
+const Counter = (props) => {
   const [seconds, setSeconds] =  useState(utils.getTimeLeft().secondsLeft());
   const [minutes, setMinutes] =  useState(utils.getTimeLeft().minutesLeft());
   const [hours, setHours] =  useState(utils.getTimeLeft().hoursLeft());

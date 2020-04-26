@@ -1,0 +1,25 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.user-section{
+  margin-top:$space-xl;
+  width: $area-full;
+  &-message{
+    font-size: $font-m;
+    text-align: left;
+    margin: $space-l 0px;
+    width: $area-3q;
+    & span {
+      color:$mid-color;
+    }
+  }
+}
+.user-article{
+  @include flex-center(column);
+  width: $area-full;
+}
+@media (min-width: $breakpoint-medium-screen) {
+  .user-article{
+    width: $area-3q;
+  }
+}

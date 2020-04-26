@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from "../images/main-logo.svg"
+import logo from "../../images/main-logo.svg"
 
-function Logo(props) {
+const Logo = props => {
   return (
     <img className={props.LogoType} src={logo} alt='logo'/>
   )

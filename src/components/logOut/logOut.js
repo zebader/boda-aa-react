@@ -1,9 +1,9 @@
 import React from 'react';
-import { withAuth } from '../lib/AuthProvider';
-import logOutImg from "../images/logout.svg";
-import utils from '../utils/utils'
+import { withAuth } from '../../lib/AuthProvider';
+import logOutImg from "../../images/logout.svg";
+import utils from '../../utils/utils'
 
-function LogOut(props) {
+const LogOut = (props) => {
   const logoutApp = () => {
     utils.addBackground();
     props.logout();

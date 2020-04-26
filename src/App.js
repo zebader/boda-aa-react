@@ -3,15 +3,15 @@ import { Switch } from "react-router-dom";
 import './scss/App.scss'
 
 import CreateUser from "./pages/admin/components/CreateUser";
-import AdminHome from "./pages/admin/components/AdminHome";
-import UserHome from "./pages/user/components/UserHome";
-import Login from "./pages/login/components/Login";
-import Splash from "./pages/splash/components/Splash";
+import AdminHome from "./pages/admin/AdminHome";
+import UserHome from "./pages/user/UserHome";
+import Login from "./pages/login/Login";
+import Splash from "./pages/splash/Splash";
 
-import PrivateAdminRoute from "./components/PrivateAdminRoute";
-import PrivateUserRoute from "./components/PrivateUserRoute";
+import PrivateAdminRoute from "./components/routes/PrivateAdminRoute";
+import PrivateUserRoute from "./components/routes/PrivateUserRoute";
 
-import AnonRoute from "./components/AnonRoute";
+import AnonRoute from "./components/routes/AnonRoute";
 import AuthProvider from "./lib/AuthProvider";
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
             <AnonRoute path="/" component={Splash} exact/>     
             <AnonRoute path="/login" component={Login} exact/>
             <PrivateAdminRoute path="/admin" component={AdminHome} exact/>
-            <PrivateAdminRoute path="/create-user" component={CreateUser} exact/>
+            <PrivateAdminRoute path="/admin/create-user" component={CreateUser} exact/>
             <PrivateUserRoute path="/home" component={UserHome} exact/>
           </Switch>
       </AuthProvider>

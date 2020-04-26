@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-import { withAuth } from "../lib/AuthProvider";
+import { withAuth } from "../../lib/AuthProvider";
 
-function AnonRoute({ component: Component, isLoggedin, isAdminAccount, ...rest }) {
+const AnonRoute = ({ component: Component, isLoggedin, isAdminAccount, ...rest }) => {
   return (
     <Route
       {...rest}

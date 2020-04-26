@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { withAuth } from '../../../lib/AuthProvider';
-import Logo from '../../../components/Logo'
+import { withAuth } from '../../lib/AuthProvider';
+import Logo from '../../components/logo/Logo'
 
 const Login = props => {
   const [username, setOnChangeName] = useState('')

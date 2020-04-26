@@ -1,5 +1,6 @@
-@import '../../../../scss/variables.scss';
-@import '../../../../scss/mixins.scss';
+  
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
 
 .splash-link{
   width: $area-full;
@@ -9,7 +10,7 @@
   margin:$space-xl 0px;
 }
 .splash-article {
-  background-image: url('../../../../images/triangle.svg');
+  background-image: url('../../images/triangle.svg');
   background-size:250px;
   background-repeat: no-repeat;
   background-position: center;

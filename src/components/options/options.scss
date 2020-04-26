@@ -1,0 +1,33 @@
+@import '../../scss/variables.scss';
+@import '../../scss/mixins.scss';
+
+.options-container {
+  $self: &;
+  width: $area-full;
+  margin-top: 5px;
+  &--active {
+    box-shadow: 0px 26px 0px -25px $mid-color;
+  }
+  &--inactive {
+    box-shadow: 0px 26px 0px -25px $mid-color;
+    background-color: $soft-color;
+    #{$self}-text{
+      opacity: 0.3;
+    }
+  }
+  &-text{
+    align-items: flex-start;
+    margin: $space-xl 0px;
+    &-title{
+      font-size: $font-l;
+      text-align: left;
+    }
+    &-subtitle{
+      margin: $space-s 0;
+      font-size: $font-m;
+      text-align: left;
+      color: #78CFD7;
+    }
+  }
+
+}
